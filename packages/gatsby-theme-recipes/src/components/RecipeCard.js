@@ -2,7 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import { Styled } from "theme-ui";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const componentStyles = ({
   colors: { background, grey, primary, text },
@@ -81,7 +81,7 @@ const RecipeCard = ({ recipe: { title, slug, image }, ...props }) => {
       {...props}
     >
       <div css={imageWrapperStyles}>
-        <Img fluid={image.sharp.fluid} />
+        <GatsbyImage fluid={image.sharp.fluid} />
       </div>
       <div css={theme => titleWrapperStyles(theme)}>{title}</div>
     </Styled.a>

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import { motion, AnimatePresence } from "framer-motion";
 
 const componentStyles = css`
@@ -54,7 +54,7 @@ const CoverImage = ({ image, alt = "", ...props }) => {
           exit="exit"
           {...props}
         >
-          <Img fluid={image.sharp.fluid} alt={alt} />
+          <GatsbyImage fluid={image.sharp.fluid} alt={alt} />
         </motion.div>
       </div>
     </AnimatePresence>
